@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         arch: [amd64, arm64]
-        os: [linux]
+        os: [linux, macos]
 
     steps:
       - name: Checkout Repository
