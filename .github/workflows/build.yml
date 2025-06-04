@@ -31,7 +31,7 @@ jobs:
       - name: Build Erebrus-Xray Binary
         run: |
           go mod tidy
-          go build -o $BINARY_NAME ./main.go
+          go build -o $BINARY_NAME ./main
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
