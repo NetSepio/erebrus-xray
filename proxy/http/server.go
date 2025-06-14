@@ -134,7 +134,7 @@ Start:
 	if authMethod == "paseto" {
 		// Always use Paseto auth, no matter accounts
 		token := request.Header.Get("Proxy-Authorization")
-		print("Header token: ", token)
+		errors.LogInfo(ctx, "Header token: ", token)
 		user, err := extractAndValidateToken(token, s.config.PasetoPublicKey)
 		if err != nil {
 				return common.Error2(conn.Write([]byte("HTTP/1.1 407 Proxy Authentication Required\r\nProxy-Authenticate: Basic realm=\"proxy\"\r\n\r\n")))
